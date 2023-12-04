@@ -1,0 +1,6 @@
+2023-12-05 04:43:33.800 +05:30 [INF] Searching water
+2023-12-05 04:43:41.767 +05:30 [INF] Search Test success
+2023-12-05 04:43:41.768 +05:30 [INF] Search Test  Passed
+2023-12-05 04:43:51.112 +05:30 [INF] Clicked on 3 element
+2023-12-05 04:43:51.698 +05:30 [INF] Select Product scenario success
+2023-12-05 04:43:51.698 +05:30 [INF] Select Product Passed

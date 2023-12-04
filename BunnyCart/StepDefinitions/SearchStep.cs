@@ -1,3 +1,4 @@
+/*using BunnyCart.Hooks;
 using BunnyCart.Utilities;
 using NUnit.Framework;
 using OpenQA.Selenium;
@@ -10,41 +11,10 @@ using TechTalk.SpecFlow;
 namespace BunnyCart.StepDefinitions
 {
     [Binding]
-
-    
     public class SearchStep : CoreCodes
     {
+        IWebDriver? driver = AllHooks.driver;
        
-        [BeforeFeature]
-        public static void InitializeBrowser()
-        {
-            driver = new ChromeDriver();
-            driver.Manage().Window.Maximize();
-        }
-        [BeforeFeature]
-        public static void CreatingLog()
-        {
-            string? curDir = Directory.GetParent(@"../../../").FullName;
-            string? fileName = curDir + "/Logs/search" + DateTime.Now.ToString("ddMMyyyy_hhmmss") + ".txt";
-
-            Log.Logger = new LoggerConfiguration()
-                 .WriteTo.Console()
-                 .WriteTo.File(fileName, rollingInterval: RollingInterval.Day)
-                 .CreateLogger();
-
-        }
-
-        [AfterScenario]
-        public static void NavigateBackToHomePage()
-        {
-            driver.Navigate().GoToUrl("https://www.bunnycart.com/");
-        }
-        [AfterFeature]
-        public static void CleanupBrowser()
-        {
-            driver?.Quit();
-        }
-
         [Given(@"User will be on home page")]
         public void GivenUserWillBeOnHomePage()
         {
@@ -56,6 +26,7 @@ namespace BunnyCart.StepDefinitions
         {
             IWebElement? searchBox = driver?.FindElement(By.Id("search"));
             searchBox?.SendKeys(input);
+            Log.Information("Searching " + input);
             searchBox?.SendKeys(Keys.Enter);
 
         }
@@ -66,7 +37,7 @@ namespace BunnyCart.StepDefinitions
         public void ThenSearchResultsAreLoadedInTheSamePageWithInUrl(string input)
         {
 
-            ToTakeScreenshots();
+            ToTakeScreenshots(driver);
             try
             {
               
@@ -86,3 +57,4 @@ namespace BunnyCart.StepDefinitions
         }
     }
 }
+*/

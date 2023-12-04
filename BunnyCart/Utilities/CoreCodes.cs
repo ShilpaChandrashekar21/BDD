@@ -11,8 +11,7 @@ namespace BunnyCart.Utilities
 {
     public class CoreCodes
     {
-       public static  IWebDriver? driver;
-        public void ToTakeScreenshots()
+        public void ToTakeScreenshots(IWebDriver driver)
         {
             ITakesScreenshot? takesScreenshot = (ITakesScreenshot)driver;
             Screenshot screenshot = takesScreenshot.GetScreenshot();
