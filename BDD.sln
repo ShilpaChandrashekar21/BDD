@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleProject", "SampleProject\SampleProject.csproj", "{829B1BA7-5560-41E1-B62D-9DA78DC8D1B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedinTests", "Linkedin\LinkedinTests.csproj", "{5978754A-88C5-40BF-9C71-133E6701FCE6}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BunnyCart", "BunnyCart\BunnyCart.csproj", "{A67F9D9B-A57B-412C-BA8A-6E70B6DD1F0C}"
 EndProject
 Global
@@ -17,10 +19,6 @@ Global
 		{829B1BA7-5560-41E1-B62D-9DA78DC8D1B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{829B1BA7-5560-41E1-B62D-9DA78DC8D1B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{829B1BA7-5560-41E1-B62D-9DA78DC8D1B0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A67F9D9B-A57B-412C-BA8A-6E70B6DD1F0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A67F9D9B-A57B-412C-BA8A-6E70B6DD1F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A67F9D9B-A57B-412C-BA8A-6E70B6DD1F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A67F9D9B-A57B-412C-BA8A-6E70B6DD1F0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
