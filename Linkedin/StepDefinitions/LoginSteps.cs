@@ -41,8 +41,8 @@ namespace LinkedinTests.StepDefinitions
             driver.Manage().Window.Maximize();
         }
 
-        [When(@"User will enter username")]
-        public void WhenUserWillEnterUsername()
+        [When(@"User will enter username '(.*)'")]
+        public void WhenUserWillEnterUsername(string username)
         {
             DefaultWait<IWebDriver?> fwait = new DefaultWait<IWebDriver?>(driver);
             fwait.Timeout = TimeSpan.FromSeconds(5);
@@ -51,12 +51,12 @@ namespace LinkedinTests.StepDefinitions
             Console.WriteLine(fwait.Message);//fwait.Message = "No such element"
 
             IWebElement? emailInput = fwait.Until(d => d?.FindElement(By.Id("session_key")));
-            emailInput?.SendKeys("abc@xyz.com");
+            emailInput?.SendKeys(username);
             
         }
 
-        [When(@"User will enter password")]
-        public void WhenUserWillEnterPassword()
+        [When(@"User will enter password '(.*)'")]
+        public void WhenUserWillEnterPassword(string pwd)
         {
             DefaultWait<IWebDriver?> fwait = new DefaultWait<IWebDriver?>(driver);
             fwait.Timeout = TimeSpan.FromSeconds(5);
@@ -65,7 +65,8 @@ namespace LinkedinTests.StepDefinitions
             Console.WriteLine(fwait.Message);
 
             password = fwait.Until(d => d?.FindElement(By.Id("session_password")));
-            password?.SendKeys("12345");
+            password?.SendKeys(pwd);
+            
         }
 
         [When(@"User will click  on login button")]
