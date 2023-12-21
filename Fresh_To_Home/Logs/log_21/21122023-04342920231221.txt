@@ -1,0 +1,7 @@
+2023-12-21 16:34:33.543 +05:30 [INF] Search url test failed 
+2023-12-21 16:34:33.633 +05:30 [ERR] Test failed for Search url test 
+ Exception:
+Search url test failed Exception 
+=  Expected: True
+  But was:  False
+
